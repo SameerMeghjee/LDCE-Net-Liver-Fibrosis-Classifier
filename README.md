@@ -17,7 +17,6 @@ LDCE-Net/
 ├── ldce_net_model.py         # Model definition (LDCE-Net with depthwise + attention)
 ├── train.py                  # Full training pipeline with plots and metrics
 ├── app.py                    # Streamlit GUI for image classification
-├── Liver Ultrasounds.zip     # Dataset (3 class folders: F0-Normal, F1-Fibrosis, F2-Cirrhosis)
 ├── ldce_model.pt             # Trained model weights
 ├── plots/                    # Accuracy, loss, and confusion matrix plots
 ├── README.md                 # Project documentation
@@ -25,15 +24,21 @@ LDCE-Net/
 
 ---
 
-## 🧪 Training the Model
-Unzip `Liver Ultrasounds.zip` into a folder and ensure it contains subfolders like:
+## 📥 Dataset
+This project uses the publicly available dataset from Kaggle:
+🔗 [Liver Histopathology Fibrosis Ultrasound Images](https://www.kaggle.com/datasets/vibhingupta028/liver-histopathology-fibrosis-ultrasound-images)
+
+After downloading, organize it into subfolders like:
 ```
 Liver Ultrasounds/
 ├── F0-Normal/
 ├── F1-Fibrosis/
 └── F2-Cirrhosis/
 ```
-Then run:
+
+---
+
+## 🧪 Training the Model
 ```bash
 python train.py
 ```
@@ -61,4 +66,3 @@ Upload any grayscale ultrasound image. The model will predict:
 - F2-Cirrhosis
 
 ---
-
